@@ -1,32 +1,33 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
 import { Link } from 'react-router-dom'
+import Button from '../components/button'
 import iphone17pro from '../assets/iphone-17pro.webp'
 import samsung24ultra from '../assets/samsung-24ultra.webp'
 import googlepixel9 from '../assets/google-pixel-9.jpg'
-import Footer from '../components/Footer'
+import { IconChevronRight, IconGitBranch } from '@tabler/icons-react'
 
 let mockdata = [
-  { 
-    id: 1, 
-    name: "iPhone 17 pro", 
-    price: 1200, 
+  {
+    id: 1,
+    name: "iPhone 17 pro",
+    price: 1200,
     img: iphone17pro,
-    slug: "iphone-17-pro" 
+    slug: "iphone-17-pro"
   },
-  { 
-    id: 2, 
-    name: "Samsung Galaxy S24 ultra", 
-    price: 1000, 
+  {
+    id: 2,
+    name: "Samsung Galaxy S24 ultra",
+    price: 1000,
     img: samsung24ultra,
-    slug: "samsung-galaxy-s24-ultra" 
+    slug: "samsung-galaxy-s24-ultra"
   },
-  { 
-    id: 3, 
-    name: "Google Pixel 9", 
-    price: 900, 
+  {
+    id: 3,
+    name: "Google Pixel 9",
+    price: 900,
     img: googlepixel9,
-    slug: "google-pixel-9" 
+    slug: "google-pixel-9"
   },
 ];
 
@@ -56,10 +57,21 @@ const Home = () => {
             ))}
           </ul>
         </div> */}
+
+        <div className='flex gap-4 mt-4 '>
+          <Button variant="default">Default</Button>
+          <Button variant="secondary">Secondary</Button>
+          <Button variant="destructive">Destructive</Button>
+          <Button variant="outline">Outline</Button>
+          <Button variant="ghost">Ghost</Button>
+          <Button variant="link">Link</Button>
+          <Button variant="icon"><IconChevronRight stroke={2} /></Button>
+          <Button variant="withIcon"><IconGitBranch /> New Branch</Button>
+        </div>
       </div>
     </>
   )
 }
 
 export default Home
-export { mockdata }   // 👈 Slug sahifada foydalanish uchun export qildik
+export { mockdata }   
