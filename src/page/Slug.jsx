@@ -12,7 +12,6 @@ const Slug = () => {
 
   return (
     <>
-        <Navbar />
         <div className="grid justify-center">
             <div className="border w-[320px] p-3 rounded-2xl">
                 <img className="rounded-2xl" src={product.img} alt={product.name} />

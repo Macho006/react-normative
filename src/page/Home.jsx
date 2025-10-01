@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import iphone17pro from '../assets/iphone-17pro.webp'
 import samsung24ultra from '../assets/samsung-24ultra.webp'
 import googlepixel9 from '../assets/google-pixel-9.jpg'
+import Footer from '../components/Footer'
 
 let mockdata = [
   { 
@@ -33,7 +34,6 @@ const Home = () => {
   return (
     <>
       <div className='conatiner mx-auto px-6 flex flex-col justify-center items-center'>
-        <Navbar />
         <h1 className='text-center text-2xl'>Salom, Bu bosh sahifa</h1>
         {/* <div className='flex gap-6 justify-center items-center mt-5'>
           <Link to="/about" className="px-8 py-2 border-2 border-[#2c2c2c] bg-[#1a1a1a] text-white text-lg font-bold rounded-full cursor-pointer">About</Link>
