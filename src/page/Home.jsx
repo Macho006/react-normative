@@ -35,12 +35,12 @@ const Home = () => {
       <div className='conatiner mx-auto px-6 flex flex-col justify-center items-center'>
         <Navbar />
         <h1 className='text-center text-2xl'>Salom, Bu bosh sahifa</h1>
-        <div className='flex gap-6 justify-center items-center mt-5'>
+        {/* <div className='flex gap-6 justify-center items-center mt-5'>
           <Link to="/about" className="px-8 py-2 border-2 border-[#2c2c2c] bg-[#1a1a1a] text-white text-lg font-bold rounded-full cursor-pointer">About</Link>
           <Link to="/contact" className="px-8 py-2 border-2 border-[#2c2c2c] bg-[#1a1a1a] text-white text-lg font-bold rounded-full cursor-pointer">Contact</Link>
-        </div>
+        </div> */}
 
-        <div>
+        {/* <div>
           <h1 className='text-center my-8 text-3xl'>Products</h1>
           <ul className='grid grid-cols-3 gap-12'>
             {mockdata.map((item) => (
@@ -55,7 +55,7 @@ const Home = () => {
               </div>
             ))}
           </ul>
-        </div>
+        </div> */}
       </div>
     </>
   )
