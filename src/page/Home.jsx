@@ -1,7 +1,7 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
 import { Link } from 'react-router-dom'
-import Button from '../components/button'
+import Button from '../components/Button'
 import iphone17pro from '../assets/iphone-17pro.webp'
 import samsung24ultra from '../assets/samsung-24ultra.webp'
 import googlepixel9 from '../assets/google-pixel-9.jpg'
