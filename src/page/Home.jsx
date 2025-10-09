@@ -35,7 +35,7 @@ const Home = () => {
   return (
     <>
       <div className='conatiner mx-auto px-6 flex flex-col justify-center items-center'>
-        <h1 className='text-center text-2xl'>Salom, Bu bosh sahifa</h1>
+        {/* <h1 className='text-center text-2xl'>Salom, Bu bosh sahifa</h1> */}
         {/* <div className='flex gap-6 justify-center items-center mt-5'>
           <Link to="/about" className="px-8 py-2 border-2 border-[#2c2c2c] bg-[#1a1a1a] text-white text-lg font-bold rounded-full cursor-pointer">About</Link>
           <Link to="/contact" className="px-8 py-2 border-2 border-[#2c2c2c] bg-[#1a1a1a] text-white text-lg font-bold rounded-full cursor-pointer">Contact</Link>
@@ -58,7 +58,7 @@ const Home = () => {
           </ul>
         </div> */}
 
-        <div className='flex gap-4 mt-4 '>
+        {/* <div className='flex gap-4 mt-4 '>
           <Button variant="default">Default</Button>
           <Button variant="secondary">Secondary</Button>
           <Button variant="destructive">Destructive</Button>
@@ -67,7 +67,7 @@ const Home = () => {
           <Button variant="link">Link</Button>
           <Button variant="icon"><IconChevronRight stroke={2} /></Button>
           <Button variant="withIcon"><IconGitBranch /> New Branch</Button>
-        </div>
+        </div> */}
       </div>
     </>
   )
