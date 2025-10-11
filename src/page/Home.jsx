@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from "react";
 import Navbar from '../components/Navbar'
 import { Link } from 'react-router-dom'
 import Button from '../components/Button'
@@ -6,6 +6,7 @@ import iphone17pro from '../assets/iphone-17pro.webp'
 import samsung24ultra from '../assets/samsung-24ultra.webp'
 import googlepixel9 from '../assets/google-pixel-9.jpg'
 import { IconChevronRight, IconGitBranch } from '@tabler/icons-react'
+import { ArrowLeft, ArrowRight, Minus, Plus } from "lucide-react";
 
 let mockdata = [
   {
@@ -32,6 +33,38 @@ let mockdata = [
 ];
 
 const Home = () => {
+  const price = 20;
+  const [quantity, setQuantity] = useState(1);
+
+  const increment = () => setQuantity(q => q + 1);
+  const decrement = () => setQuantity(q => (q > 1 ? q - 1 : 1));
+
+  const total = quantity * price;
+
+
+
+  const images = [
+    "https://picsum.photos/id/1018/600/300",
+    "https://picsum.photos/id/1019/600/300",
+    "https://picsum.photos/id/1035/600/300",
+    "https://picsum.photos/id/1045/600/300",
+  ];
+
+  const [index, setIndex] = useState(0);
+  const [paused, setPaused] = useState(false);
+
+  useEffect(() => {
+    if (paused) return;
+    const interval = setInterval(() => {
+      setIndex(prev => (prev + 1) % images.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, [paused, images.length]);
+
+
+  const next = () => setIndex(i => (i + 1) % images.length);
+  const prev = () => setIndex(i => (i - 1 + images.length) % images.length);
+
   return (
     <>
       <div className='conatiner mx-auto px-6 flex flex-col justify-center items-center'>
@@ -68,6 +101,41 @@ const Home = () => {
           <Button variant="icon"><IconChevronRight stroke={2} /></Button>
           <Button variant="withIcon"><IconGitBranch /> New Branch</Button>
         </div> */}
+
+
+
+
+        <div style={{ textAlign: "center", marginTop: "50px" }}>
+          <h2>Futbolka - ${price}</h2>
+
+          <div style={{ display: "inline-flex", alignItems: "center", gap: "15px" }}>
+            <button onClick={decrement}><Minus /></button>
+            <span style={{ fontSize: "20px" }}>{quantity}</span>
+            <button onClick={increment}><Plus /></button>
+          </div>
+
+          <h3>Umumiy narx: ${total}</h3>
+        </div>
+
+
+        <div className="text-center mt-10">
+          <h2 className="text-2xl font-semibold mb-4">Auto Image Slider</h2>
+
+          <div className="relative inline-block">
+            <img src={images[index]} alt="slider" className="w-[600px] h-[300px] rounded-lg object-cover shadow-md transition-all duration-500" />
+
+            <div className="mt-4 space-x-4">
+              <button onClick={prev} className="px-4 py-2 bg-gray-800 text-white rounded hover:bg-gray-700 transition">
+                <ArrowLeft />
+              </button>
+              <button onClick={next} className="px-4 py-2 bg-gray-800 text-white rounded hover:bg-gray-700 transition">
+                <ArrowRight />
+              </button>
+            </div>
+          </div>
+        </div>
+
+
       </div>
     </>
   )
