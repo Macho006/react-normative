@@ -33,37 +33,37 @@ let mockdata = [
 ];
 
 const Home = () => {
-  const price = 20;
-  const [quantity, setQuantity] = useState(1);
+  // const price = 20;
+  // const [quantity, setQuantity] = useState(1);
 
-  const increment = () => setQuantity(q => q + 1);
-  const decrement = () => setQuantity(q => (q > 1 ? q - 1 : 1));
+  // const increment = () => setQuantity(q => q + 1);
+  // const decrement = () => setQuantity(q => (q > 1 ? q - 1 : 1));
 
-  const total = quantity * price;
-
-
-
-  const images = [
-    "https://picsum.photos/id/1018/600/300",
-    "https://picsum.photos/id/1019/600/300",
-    "https://picsum.photos/id/1035/600/300",
-    "https://picsum.photos/id/1045/600/300",
-  ];
-
-  const [index, setIndex] = useState(0);
-  const [paused, setPaused] = useState(false);
-
-  useEffect(() => {
-    if (paused) return;
-    const interval = setInterval(() => {
-      setIndex(prev => (prev + 1) % images.length);
-    }, 3000);
-    return () => clearInterval(interval);
-  }, [paused, images.length]);
+  // const total = quantity * price;
 
 
-  const next = () => setIndex(i => (i + 1) % images.length);
-  const prev = () => setIndex(i => (i - 1 + images.length) % images.length);
+
+  // const images = [
+  //   "https://picsum.photos/id/1018/600/300",
+  //   "https://picsum.photos/id/1019/600/300",
+  //   "https://picsum.photos/id/1035/600/300",
+  //   "https://picsum.photos/id/1045/600/300",
+  // ];
+
+  // const [index, setIndex] = useState(0);
+  // const [paused, setPaused] = useState(false);
+
+  // useEffect(() => {
+  //   if (paused) return;
+  //   const interval = setInterval(() => {
+  //     setIndex(prev => (prev + 1) % images.length);
+  //   }, 3000);
+  //   return () => clearInterval(interval);
+  // }, [paused, images.length]);
+
+
+  // const next = () => setIndex(i => (i + 1) % images.length);
+  // const prev = () => setIndex(i => (i - 1 + images.length) % images.length);
 
   return (
     <>
@@ -105,7 +105,7 @@ const Home = () => {
 
 
 
-        <div style={{ textAlign: "center", marginTop: "50px" }}>
+        {/* <div style={{ textAlign: "center", marginTop: "50px" }}>
           <h2>Futbolka - ${price}</h2>
 
           <div style={{ display: "inline-flex", alignItems: "center", gap: "15px" }}>
@@ -133,7 +133,13 @@ const Home = () => {
               </button>
             </div>
           </div>
-        </div>
+        </div> */}
+
+
+
+
+
+        
 
 
       </div>
