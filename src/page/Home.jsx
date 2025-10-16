@@ -7,6 +7,7 @@ import samsung24ultra from '../assets/samsung-24ultra.webp'
 import googlepixel9 from '../assets/google-pixel-9.jpg'
 import { IconChevronRight, IconGitBranch } from '@tabler/icons-react'
 import { ArrowLeft, ArrowRight, Minus, Plus } from "lucide-react";
+import VideoPlayer from "../components/VideoPlayer";
 
 let mockdata = [
   {
@@ -139,7 +140,7 @@ const Home = () => {
 
 
 
-        
+        <VideoPlayer />
 
 
       </div>
