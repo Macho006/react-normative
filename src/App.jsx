@@ -7,6 +7,7 @@ import Services from './page/Services'
 import NotFound from './page/NotFound'
 import Slug from './page/Slug'
 import Cards from "./page/Cards";
+import { Hooks } from './page/Hooks';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/services" element={<Services />} />
           <Route path="/product/:slug" element={<Slug />} />
           <Route path="cards" element={<Cards />} />
+          <Route path="hooks" element={<Hooks />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
